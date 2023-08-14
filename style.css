@@ -1,0 +1,418 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+body{
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+nav{
+    height: 56px;
+    width: 100%;
+    background:white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right:1.5rem;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+}
+.nav-left{
+    display: flex;
+    /* align-items: center; */
+}
+.nav-left .search-box{
+    display: none;
+}
+.nav-middle{
+    display: flex;
+    justify-content: center;
+}
+.nav-middle input{
+    width: 450px;
+    height: 40px;
+    padding-left:7px ;
+    font-size:17px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.search-box{
+    width: 500px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    background-color:#eee;
+}
+.search-box i{
+    font-size: 20px;
+    padding-left: 15px;
+}
+.nav-right{
+    display: flex;
+    align-items: center ;
+}
+.nav-right a{
+    text-decoration: none;
+    color: #333;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left:10px;
+}
+.nav-right a:hover{
+    background-color: rgb(179, 187, 187);
+}
+.nav-right i{
+    font-size:20px;
+}
+.nav-right .profile{
+    background:url(./images/dp.jpg);
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+/* ============  Container ================== */
+.container{
+    display: flex;
+    background: #eee;
+    /* width: 100vw; */
+    /* height:auto; */
+}
+.left-panel, .right-panel{
+    position: sticky;
+    top:56px;
+    width: 250px;
+    height:calc(100vh - 56px);
+    /* color: red; */
+    /* background-color: aqua; */
+}
+.left-panel ul{
+    padding: 10px 0;
+}
+.left-item ul li{
+list-style: none;
+display: flex;
+padding: 0.7rem 1rem;
+align-items: center;
+border-radius: 5px;
+cursor: pointer;
+}
+.left-item .profile{
+    background:url(./images/dp.jpg);
+    height: 25px;
+    width: 25px;
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 0px;
+}
+.left-item i{
+    font-size: 20px;
+}
+.left-panel .left-item .active{
+    position: relative;
+    color: royalblue;
+}
+.left-panel .left-item .active::after{
+    content: '';
+    width: 7px;
+    height:35px;
+    position: absolute;
+    bottom:4px;
+    left:-10px;
+    border-radius:30%;
+    /* color: red; */
+    background-color: rgb(14, 122, 223);
+}
+/* === specific icon color and size change === */
+
+.left-item i.fa-list-ul{
+    font-size: 24px;
+    color: rgb(24, 199, 185);
+}
+.left-item i.fa-film{
+    font-size: 24px;
+    color:rgb(24,199,185);
+}
+.left-item a{
+    /* padding-left: 10px; */
+    margin-left: 10px;
+    color:black;
+    font-weight:500;
+}
+.left-item{
+    padding-left: 8px;
+}
+.left-item li:hover{
+    background-color:#ddd;
+}
+.left-item li img{
+    width: 25px;
+    height: 25px;
+}
+.footer-links{
+    padding-top: 40px;
+}
+.footer-links a{
+margin: 10px;
+line-height:20px;
+color: rgb(84, 81, 81);
+}
+.footer-links a:hover{
+    text-decoration: underline;
+}
+
+/* ====Middle Panel===== */
+.middle-panel{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.middle-panel .story-section{
+    display: flex;
+    margin-top: 20px;
+    padding: 1rem;
+    width: 500px;
+    color: #fff;
+    background-color: #fff;
+    border-radius:12px;
+    justify-content: center;
+}
+.middle-panel .story-section .story{
+    width: 120px;
+    height: 200px;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0px 5px;
+    box-shadow: 0 0 5px 5px #ddd;
+    background: #fff;
+}
+.story img{
+    height: 100%;
+    transition:0.3s ease-in;
+}
+.story:hover > img{
+    transform:scale(1.05);
+}
+.story-section .dp-image{
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+}
+.story .name{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding: 5px;
+    font-weight:bold;
+}
+.story .dp-container{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: 4px solid royalblue;
+}
+.story.create .dp-container{
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: royalblue;
+    border: 4px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dp-container img{
+    width: 40px;
+    height: 40px;
+}
+.story.create .dp-container i{
+    color: #fff;
+}
+.story.create .name{
+    color: black;
+    font-size: 13px;
+    font-weight: 500;
+    left: 13px;
+}
+
+/* ======== Post ====== */
+.post{
+    width:500px;
+    background:#fff;
+    border-radius: 10px;
+    /* padding: 10px; */
+    margin: 10px;
+}
+.post .post-top{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.post .post-top .dp{
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    overflow: hidden;
+
+}
+.post .post-top .dp img{
+    cursor: pointer;
+    width: 100%;
+}
+.post .post-top i{
+    margin-left: auto;
+    cursor: pointer;
+}
+.post .post-top > input{
+    height: 40px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background: #eee;
+    margin-left: 10px;
+    padding: 5px 10px;
+    flex: 1;
+}
+.post .post-bottom{
+    /* box-shadow:1px solid #ddd; */
+    display: flex;
+    justify-content: space-between;
+    /* padding: 10px 10px 10px 10px; */
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+.post .post-bottom .action{
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s ease-in;
+}
+.post .post-bottom .action:hover{
+    background: #eee;
+    
+}
+.post.create .post-bottom .action i.fa-video{
+    color: #d74;
+}
+.post.create .post-bottom .action i{
+    font-size: 25px;
+}
+.post.create .post-bottom .action i.fa-image{
+    color: rgb(117, 186, 12);
+}
+.post.create .post-bottom .action i.fa-smile{
+    color:rgb(252, 232, 10);
+}
+ 
+.post.create .post-bottom .action span{
+    text-align: center;
+    position: relative;
+    font-size:17px;
+    margin-left: 5px;
+    bottom: 4px;
+} 
+.post .post-top .post-info{
+    margin-left: 10px;
+    font-weight: bold;
+}
+.post .post-top .post-info .name{
+    cursor: pointer;
+    font-size: 16px;
+}
+.post .post-top .post-info .time{
+    font-size: 12px;
+    font-weight:lighter;
+    cursor: pointer;
+}
+.post .post-content{
+    font-size: 16px;
+    font-weight: normal;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.post .post-content > img{
+    width: 100%;
+    margin-top: 10px;
+}
+.post .post-content p{
+    padding: 10px;
+}
+
+/* ============== Right panel ============= */
+.container .right-panel{
+    padding:1rem;
+}
+.friend-section,.group-section{
+    margin: 1rem 0px;
+}
+.friend-section h4{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.right-panel .friend-section .page,
+.right-panel .group-section .page{
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 7px 10px;
+    color: #333;
+}
+.right-panel .page:hover{
+    background: #ddd;
+}
+.right-panel .friend-section .page > .dp{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.right-panel .page .dp > img{
+    width: 100%;
+}
+.right-panel .friend-section .name, .right-panel .group-section .name{
+cursor: pointer;
+font-size: 18px;
+margin-left: 8px;
+}
+.right-panel .group-section .page a{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(199, 194, 194);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+}

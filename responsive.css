@@ -1,0 +1,130 @@
+/* =========================== Responsive Media Query ======================== */
+@media screen and (max-width:1160px) {
+    .left-panel{
+        width:auto;
+        background-color: white;
+    }
+    .left-item ul li a{
+        display: none;
+    }
+    .footer-links{
+        display: none;
+    }
+    
+}
+@media screen and (max-width:900px) {   
+    nav{
+        display:flex;
+        /* justify-content:flex-start; */
+    }
+    .nav-middle{
+        display:none;
+    }
+    .nav-left .search-box{
+        display: flex;
+    }
+    .nav-left .search-box{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content:center;
+        padding: 0;
+        position: relative;
+        top:26px;
+    }
+    .nav-left .search-box i{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        position: relative;
+        right: 7px;
+    }
+    .right-panel{
+        display: none;
+    }
+    .middle-panel{
+        width:100%;
+    }
+   
+}
+@media screen and (max-width:600px) {
+    .left-panel{
+        display: none;
+        /* display: flex; */
+
+    }
+    .middle-panel{
+        /* width:100%; */
+        padding: 0;
+    }
+    .middle-panel .story-section{
+        width:100%;
+    }
+    .post{
+    width:100%;
+        /* padding:10px; */
+    }
+}
+@media screen and (max-width:500px) {
+    .middle-panel .story-section .shide{
+        display: none;
+    }
+    .post.create .post-bottom .action span{
+        font-size: 12px;
+        margin: 0;
+        bottom: 2px;
+    }
+    .post.create .post-bottom .action{
+        padding:8px;
+    }
+    .post.create .post-bottom .action i{
+        font-size: 16px;
+    }
+    
+}
+@media screen and (max-width:350px) {
+    .nav-left .logo1{
+        width:90px;
+        height:70px;
+    }
+    .nav-left i{
+        font-size: 14px;
+    }
+    .nav-left .search-box{
+        width: 30px;
+        height: 30px;
+        position: relative;
+        top: 20px;
+    }
+    .nav-right i{
+        font-size: 14px;
+    }
+    .nav-right a{
+        width: 30px;
+        height: 30px;
+    }
+    .nav-right .profile{
+        width: 30px;
+        height: 30px;
+    }
+    .story.create .name{
+        font-size: 10px;
+        left: 12px;
+    }
+    .middle-panel .story-section{
+        width:80%;
+    }
+    .post.create .post-bottom .action span{
+        font-size: 8px;
+        margin:0;
+        bottom: 0;
+    }
+    .post.create .post-bottom .action{
+        padding:3px;
+        /* margin-bottom: 12px; */
+    }
+    .post.create .post-bottom .action i{
+        font-size: 10px;
+    }
+    
+}
